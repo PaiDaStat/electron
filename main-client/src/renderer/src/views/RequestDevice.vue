@@ -17,9 +17,9 @@ import { loadConfig } from '../utils/useDeviceConfig'
 import keyboardImage from '../assets/deviceImg/GK8.webp'
 import keyboardImage2 from '../assets/deviceImg/a7pro.png'
 import keyboardImage1 from '../assets/deviceImg/00.webp'
-import wiredIcon from '../assets/icons/wired-icon.svg'
-import wifiIcon from '../assets/icons/2.4G-icon.svg'
-import chargeIcon from '../assets/icons/charge-icon.svg'
+import wiredIcon from '../assets/icons/wired-icon.svg?url'
+import wifiIcon from '../assets/icons/2.4G-icon.svg?url'
+import chargeIcon from '../assets/icons/charge-icon.svg?url'
 
 // 环境变量
 const environment = ref(null);
@@ -155,14 +155,14 @@ onMounted(async () => {
                     <div v-if="item.electricity >= 0" class="connect-content-item">
                         <div class="wireless">
                             <div class="icon-mask"
-                                :style="{ maskImage: `url(${item.connectionType === 1 ? wiredIcon : wifiIcon})`, WebkitMaskImage: `url(${item.connectionType === 1 ? wiredIcon : wifiIcon})` }">
+                                :style="{ maskImage: `url('${item.connectionType === 1 ? wiredIcon : wifiIcon}')`, WebkitMaskImage: `url('${item.connectionType === 1 ? wiredIcon : wifiIcon}')` }">
                             </div>
                         </div>
                         <div>
                             <div class="charge" v-if="item.connectionType === 1">
                                 <div>
                                     <div class="icon-mask"
-                                        :style="{ maskImage: `url(${chargeIcon})`, WebkitMaskImage: `url(${chargeIcon})` }">
+                                        :style="{ maskImage: `url('${chargeIcon}')`, WebkitMaskImage: `url('${chargeIcon}')` }">
                                     </div>
                                 </div>
                                 <div>充电中</div>
