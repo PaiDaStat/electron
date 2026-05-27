@@ -1,0 +1,255 @@
+{
+    "keyboard": {
+        "model": [
+            {
+                "vid": 12610,
+                "pid": 130,
+                "connectionType": 1
+            },
+            {
+                "vid": 12610,
+                "pid": 132,
+                "connectionType": 2
+            }
+        ],
+        "deviceType": 1,
+        "profileSize": 64,
+        "matrixSize": 384,
+        "profileTotalNumber": 3,
+
+        "commandTable": {
+        "profileIndex": { "offset": 0, "range": { "min": 0, "max": 5 } },
+        "ledIndex": { "offset": 1},
+        "brightness": { "offset": 2, "range": { "min": 0, "max": 5 } },
+        "speed": { "offset": 3, "range": { "min": 0, "max": 5 } },
+        "direction": { "offset": 4, "range": { "min": 0, "max": 1 } },
+        "isColorful": { "offset": 5, "range": { "min": 0, "max": 1 } },
+        "colorR": { "offset": 6, "range": { "min": 0, "max": 255 } },
+        "colorG": { "offset": 7, "range": { "min": 0, "max": 255 } },
+        "colorB": { "offset": 8, "range": { "min": 0, "max": 255 } },
+        "specialLighting": { "offset": 18, "range": { "min": 0, "max": 3 } }
+        },
+        "LightingEffectList": [
+            {
+                "name": "随波逐流",
+                "ledIndex": 1,
+                "command": "01",
+                "customBol": false,
+                "speedBol": true,
+                "directionBol": true,
+                "colourfulBol": true,
+                "brightnessBol": true,
+                "specialModeBol": false
+            },
+            {
+                "name": "彩云纷飞",
+                "ledIndex": 2,
+                "command": "02",
+                "customBol": false,
+                "speedBol": true,
+                "directionBol": true,
+                "colourfulBol": true,
+                "brightnessBol": true,
+                "specialModeBol": false
+            },
+            {
+                "name": "峰回路转",
+                "ledIndex": 3,
+                "command": "03",
+                "customBol": false,
+                "speedBol": true,
+                "directionBol": true,
+                "colourfulBol": true,
+                "brightnessBol": true,
+                "specialModeBol": false
+            },
+            {
+                "name": "光之审判",
+                "ledIndex": 4,
+                "command": "04",
+                "customBol": false,
+                "speedBol": true,
+                "directionBol": false,
+                "colourfulBol": false,
+                "brightnessBol": true,
+                "specialModeBol": false
+            },
+            {
+                "name": "呼吸模式",
+                "ledIndex": 5,
+                "command": "05",
+                "customBol": false,
+                "speedBol": true,
+                "directionBol": false,
+                "colourfulBol": true,
+                "brightnessBol": true,
+                "specialModeBol": false
+            },
+            {
+                "name": "常亮模式",
+                "ledIndex": 6,
+                "command": "06",
+                "customBol": false,
+                "speedBol": false,
+                "directionBol": false,
+                "colourfulBol": true,
+                "brightnessBol": true,
+                "specialModeBol": false
+            },
+            {
+                "name": "踏雪无痕",
+                "ledIndex": 7,
+                "command": "07",
+                "customBol": false,
+                "speedBol": true,
+                "directionBol": false,
+                "colourfulBol": true,
+                "brightnessBol": true,
+                "specialModeBol": false
+            },
+            {
+                "name": "泛起涟漪",
+                "ledIndex": 8,
+                "command": "08",
+                "customBol": false,
+                "speedBol": true,
+                "directionBol": false,
+                "colourfulBol": true,
+                "brightnessBol": true,
+                "specialModeBol": false
+            },
+            {
+                "name": "奔逸绝尘",
+                "ledIndex": 9,
+                "command": "09",
+                "customBol": false,
+                "speedBol": true,
+                "directionBol": false,
+                "colourfulBol": true,
+                "brightnessBol": true,
+                "specialModeBol": false
+            },
+            {
+                "name": "繁星点点",
+                "ledIndex": 10,
+                "command": "0A",
+                "customBol": false,
+                "speedBol": true,
+                "directionBol": false,
+                "colourfulBol": true,
+                "brightnessBol": true,
+                "specialModeBol": false
+            },
+            {
+                "name": "百花争艳",
+                "ledIndex": 11,
+                "command": "0B",
+                "customBol": false,
+                "speedBol": true,
+                "directionBol": false,
+                "colourfulBol": false,
+                "brightnessBol": true,
+                "specialModeBol": false
+            },
+            {
+                "name": "流星赶月",
+                "ledIndex": 12,
+                "command": "0C",
+                "customBol": false,
+                "speedBol": true,
+                "directionBol": true,
+                "colourfulBol": false,
+                "brightnessBol": true,
+                "specialModeBol": false
+            },
+            {
+                "name": "大鹏展翅",
+                "ledIndex": 13,
+                "command": "0D",
+                "customBol": false,
+                "speedBol": true,
+                "directionBol": false,
+                "colourfulBol": true,
+                "brightnessBol": true,
+                "specialModeBol": false
+            },
+            {
+                "name": "厚积薄发",
+                "ledIndex": 14,
+                "command": "0E",
+                "customBol": false,
+                "speedBol": true,
+                "directionBol": false,
+                "colourfulBol": true,
+                "brightnessBol": true,
+                "specialModeBol": false
+            },
+            {
+                "name": "落雨纷纷",
+                "ledIndex": 15,
+                "command": "0F",
+                "customBol": false,
+                "speedBol": true,
+                "directionBol": false,
+                "colourfulBol": true,
+                "brightnessBol": true,
+                "specialModeBol": false
+            },
+            {
+                "name": "左右逢源",
+                "ledIndex": 16,
+                "command": "10",
+                "customBol": false,
+                "speedBol": false,
+                "directionBol": false,
+                "colourfulBol": true,
+                "brightnessBol": true,
+                "specialModeBol": false
+            },
+            {
+                "name": "从志成城",
+                "ledIndex": 17,
+                "command": "11",
+                "customBol": false,
+                "speedBol": false,
+                "directionBol": false,
+                "colourfulBol": false,
+                "brightnessBol": true,
+                "specialModeBol": true
+            },
+            {
+                "name": "速度激情",
+                "ledIndex": 18,
+                "command": "12",
+                "customBol": false,
+                "speedBol": false,
+                "directionBol": true,
+                "colourfulBol": false,
+                "brightnessBol": true,
+                "specialModeBol": false
+            },
+            {
+                "name": "自定义",
+                "ledIndex": 19,
+                "command": "13",
+                "customBol": true,
+                "speedBol": false,
+                "directionBol": false,
+                "colourfulBol": false,
+                "brightnessBol": true,
+                "specialModeBol": false
+            },
+            {
+                "name": "关闭",
+                "ledIndex": 20,
+                "command": "14",
+                "customBol": false,
+                "speedBol": false,
+                "directionBol": false,
+                "colourfulBol": false,
+                "brightnessBol": false,
+                "specialModeBol": false
+            }
+        ]
+    }
+}

@@ -1,0 +1,28 @@
+appId: com.evision.hub
+productName: Evision HUB
+electronVersion: 40.0.0
+directories:
+  output: dist
+  buildResources: resources
+files:
+  - out/**/*
+  - package.json
+  - resources/**/*
+icon: resources/logo.png
+asar: true
+win:
+  target: nsis
+  icon: resources/logo.png
+nsis:
+  artifactName: Evision HUB installer.${ext}
+  createDesktopShortcut: always
+  uninstallDisplayName: Evision HUB
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  shortcutName: Evision HUB
+mac:
+  target: dmg
+  icon: resources/logo.png
+linux:
+  target: AppImage
+  icon: resources/logo.png

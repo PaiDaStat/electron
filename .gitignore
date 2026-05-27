@@ -1,0 +1,14 @@
+node_modules
+dist
+out
+.DS_Store
+.idea
+.vscode
+*.log
+*.exe
+*.dmg
+*.zip
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*

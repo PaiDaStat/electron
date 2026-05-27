@@ -1,0 +1,35 @@
+{
+  "name": "device-sdk",
+  "version": "1.0.0",
+  "description": "The SDK methods for the keyboard and mouse.",
+  "type": "module",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.esm.js",
+  "unpkg": "./dist/index.global.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && node build/build.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^24.4.0",
+    "@types/w3c-web-hid": "^1.0.6",
+    "esbuild": "^0.25.9",
+    "javascript-obfuscator": "^4.1.1",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "crypto-js": "^4.2.0",
+    "eventemitter3": "^5.0.1",
+    "file-saver": "^2.0.5",
+    "node-hid": "^3.1.2"
+  }
+}

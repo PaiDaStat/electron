@@ -1,0 +1,28 @@
+{
+  "name": "universal-device-driver-monorepo",
+  "version": "1.0.0",
+  "description": "Monorepo for Universal Device Driver Project",
+  "private": true,
+  "workspaces": [
+    "device-sdk",
+    "device-docs",
+    "main-client"
+  ],
+  "scripts": {
+    "dev:e": "npm run dev --workspace=main-client",
+    "dev:w": "npm run dev:web --workspace=main-client",
+    "build:e": "npm run build --workspace=main-client",
+    "build:mac": "npm run build:mac --workspace=main-client",
+    "build:ew": "npm run build:web --workspace=main-client",
+    "build:em": "npm run build:win --workspace=main-client",
+    "dev:d": "npm run dev --workspace=device-docs",
+    "build:d": "npm run build --workspace=device-docs",
+    "dev:all": "concurrently \"npm run dev:e\" \"npm run dev:w\" \"npm run dev:d\"",
+    "build:all": "npm run build:em && npm run build:ew && npm run build:d"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

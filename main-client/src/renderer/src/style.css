@@ -1,0 +1,198 @@
+body,
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    line-height: 1.6;
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        'Fira Sans',
+        'Droid Sans',
+        'Helvetica Neue',
+        sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    font-weight: normal;
+}
+
+:root,
+.light,
+.dark {
+    /* --el-color-primary: #ee751a !important; */
+    --el-color-primary: #ee751a !important;
+    /* 以主色为主题的渐变色背景 */
+    --el-gradient-primary: linear-gradient(135deg, #ee751a 0%, #f2a052 100%) !important;
+    --el-color-primary-light-3: #f2a052 !important;
+    --el-color-primary-light-5: #f5c28c !important;
+    --el-color-primary-light-7: #f9e0c4 !important;
+    --el-color-primary-light-8: #fbedd9 !important;
+    --el-color-primary-light-9: #fdf6eb !important;
+    --el-color-primary-dark-2: #d45d0a !important;
+    /*hover  */
+    --el-color-primary-hover: rgba(238, 117, 26, 0.2) !important;
+    /* 选择按键的背景色 */
+    --el-select-option-hover-bg-color:  rgba(238, 117, 26, 0.5) !important;
+    
+    /* 全局圆角 */
+    --globalRadius: 10px;
+    /* 功能块背景区域 */
+    --funAreaRadius: 10px;
+}
+
+/* 暗黑模式 */
+.dark {
+    /* 主题背景色 */
+    --theme-bg-color: #181a1b;
+    /* 主题字体色 */
+    --theme-font-color: #FFFFFF;
+    /* 功能背景模块的背景颜色透明 */
+    --theme-fun-bgcolor: rgba(255, 255, 255, 0.1);
+    /* 功能块hover的背景颜色 */
+    --theme-fun-hover-bgcolor: rgba(255, 255, 255, 0.5);
+    /* 选中背景颜色 */
+    --theme-fun-select-bgcolor: rgba(0, 0, 0, 0.8);
+    /* 功能弹框背景颜色 */
+    --theme-fun-popup-bgcolor: rgba(73, 73, 73, 0.4);
+    /* 边框颜色 */
+    --theme-border-color: rgba(255, 255, 255, 0.1);
+    /* 加载动画颜色 */
+    --theme-loading-color: rgba(0, 0, 0, 0.8);
+    /* 小标题字体颜色 */
+    --theme-font-color-small: color-mix(in srgb, var(--theme-font-color) 50%, transparent);
+    /* icon 颜色 */
+    --theme-icon-color: #FFFFFF;
+    /* 键盘背景色 */
+    --keyboard-bg-color: rgba(255, 255, 255, 0.1);
+    /* 键盘按键背景色 */
+    --keyboard-key-bg-color: rgba(0, 0, 0, 0.7);
+    /* 键盘按键边框 */
+    --keyboard-key-border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* 亮色模式 */
+.light {
+    /* 主题背景色 */
+    --theme-bg-color: #e7e8ec;
+    /* 主题字体色 */
+    /* --theme-font-color: #3a3a3a; */
+    --theme-font-color: #000000;
+    /* 功能背景模块的背景颜色透明 */
+    --theme-fun-bgcolor: rgba(0, 0, 0, 0.06);
+    /* 功能块hover的背景颜色 */
+    --theme-fun-hover-bgcolor: rgba(0, 0, 0, 0.5);
+    /* 选中背景颜色 */
+    --theme-fun-select-bgcolor: rgba(255, 255, 255, 0.8);
+    /* 功能弹框背景颜色 */
+    --theme-fun-popup-bgcolor: rgba(196, 196, 196, 0.4);
+    /* 边框颜色 */
+    --theme-border-color: rgba(0, 0, 0, 0.1);
+    /* 加载动画颜色 */
+    --theme-loading-color: rgba(0, 0, 0, 0.6);
+    /* 小标题字体颜色 */
+    --theme-font-color-small: color-mix(in srgb, var(--theme-font-color) 60%, transparent);
+    /* icon 颜色 */
+    --theme-icon-color: #363636;
+    /* 键盘背景色 */
+    --keyboard-bg-color: rgba(0, 0, 0, 0.1);
+    /* 键盘按键背景色 */
+    --keyboard-key-bg-color: rgba(255, 255, 255, 0.6);
+    /* 键盘按键边框 */
+    --keyboard-key-border-color: rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+
+
+
+/* 整个滚动条 */
+::-webkit-scrollbar {
+    width: 3px;
+    height: 4px;
+}
+
+/* 滚动条的滑块 */
+::-webkit-scrollbar-thumb {
+    /* background-color: #c9cdd4; */
+    background: var(--theme-fun-bgcolor);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* 滚动条的轨道的两端按钮 */
+::-webkit-scrollbar-button {
+    height: 0px;
+    display: none;
+}
+
+
+
+/*  定义 bounce-in 动画 */
+@keyframes bounce-in {
+    0% {
+        transform: scale(0.6);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.el-select__wrapper {
+    background-color: var(--theme-fun-bgcolor) !important;
+    border-radius: var(--globalRadius) !important;
+    box-shadow: none !important;
+}
+
+.el-select__placeholder {
+    color: var(--theme-font-color) !important;
+}
+
+.el-input__wrapper {
+    border-radius: var(--globalRadius) !important;
+    background-color: var(--theme-fun-bgcolor) !important;
+    box-shadow: none !important;
+    border: 1px solid #dcdfe6;
+    transition: border-color 0.3s;
+
+    .el-input__inner {
+        color: var(--theme-font-color);
+    }
+
+    &:hover,
+    &.is-focus {
+        border-color: #f06c08;
+    }
+}
+
+.full-modal {
+    backdrop-filter: blur(1px);
+
+    .ant-modal-content {
+        padding: 0;
+        background: transparent;
+        box-shadow: none;
+    }
+}

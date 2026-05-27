@@ -1,0 +1,1 @@
+export { DeviceHID as default } from './compose.js';

@@ -1,0 +1,100 @@
+{
+    "keyboard": {
+        "model": [
+            {
+                "vid": 12815,
+                "pid": 8888,
+                "connectionType": 1
+            },
+            {
+                "vid": 12815,
+                "pid": 8864,
+                "connectionType": 2
+            }
+        ],
+        "deviceType": 2,
+        "profileSize": 128,
+        "matrixSize": 33,
+        "profileTotalNumber": 1,
+
+         "commandTable": {
+        "profileIndex": { "offset": 0, "range": { "min": 0, "max": 5 } },
+        "ledIndex": { "offset": 1},
+        "brightness": { "offset": 2, "range": { "min": 0, "max": 5 } },
+        "speed": { "offset": 3, "range": { "min": 0, "max": 5 } },
+        "direction": { "offset": 4, "range": { "min": 0, "max": 1 } },
+        "isColorful": { "offset": 5, "range": { "min": 0, "max": 1 } },
+        "colorR": { "offset": 6, "range": { "min": 0, "max": 255 } },
+        "colorG": { "offset": 7, "range": { "min": 0, "max": 255 } },
+        "colorB": { "offset": 8, "range": { "min": 0, "max": 255 } }
+        },
+        "LightingEffectList": [
+            {
+                "name": "常亮",
+                "ledIndex": 1,
+                "command": "01",
+                "customBol": false,
+                "speedBol": true,
+                "directionBol": true,
+                "colourfulBol": true,
+                "brightnessBol": true,
+                "specialModeBol": false
+            },
+            {
+                "name": "呼吸",
+                "ledIndex": 2,
+                "command": "02",
+                "customBol": false,
+                "speedBol": true,
+                "directionBol": true,
+                "colourfulBol": true,
+                "brightnessBol": true,
+                "specialModeBol": false
+            },
+            {
+                "name": "闪烁",
+                "ledIndex": 3,
+                "command": "03",
+                "customBol": false,
+                "speedBol": true,
+                "directionBol": true,
+                "colourfulBol": true,
+                "brightnessBol": true,
+                "specialModeBol": false
+            },
+            {
+                "name": "光谱",
+                "ledIndex": 4,
+                "command": "04",
+                "customBol": false,
+                "speedBol": true,
+                "directionBol": false,
+                "colourfulBol": false,
+                "brightnessBol": true,
+                "specialModeBol": false
+            },
+            {
+                "name": "波浪",
+                "ledIndex": 5,
+                "command": "04",
+                "customBol": false,
+                "speedBol": true,
+                "directionBol": false,
+                "colourfulBol": false,
+                "brightnessBol": true,
+                "specialModeBol": false
+            },
+            {
+                "name": "关闭",
+                "ledIndex": 6,
+                "command": "04",
+                "customBol": false,
+                "speedBol": true,
+                "directionBol": false,
+                "colourfulBol": false,
+                "brightnessBol": true,
+                "specialModeBol": false
+            }
+        ]
+    }
+}
