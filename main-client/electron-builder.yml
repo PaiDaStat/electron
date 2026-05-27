@@ -21,7 +21,9 @@ nsis:
   allowToChangeInstallationDirectory: true
   shortcutName: Evision HUB
 mac:
-  target: dmg
+  target:
+    - dmg
+    - zip
   icon: resources/logo.png
 linux:
   target: AppImage

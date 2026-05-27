@@ -4,11 +4,6 @@ on:
   # 测试流程：每次 push 到 main 分支时触发（只打包，不发布）
   push:
     branches: [main]
-  
-  # 正式流程：推送 v 开头的 tag 时触发（打包 + 发布到 GitHub Releases）
-  push:
-    tags: ['v*']
-  
   # 手动触发（方便测试）
   workflow_dispatch:
 
@@ -35,23 +30,16 @@ jobs:
           path: ~/Library/Caches/electron
           key: mac-electron-${{ hashFiles('**/package-lock.json') }}
 
+      - name: Cache Electron Builder
+        uses: actions/cache@v4
+        with:
+          path: ~/Library/Caches/electron-builder
+          key: mac-electron-builder-${{ hashFiles('**/package-lock.json') }}
+
       # ========== 测试流程：普通 push 只打包，不上传 Release ==========
       - name: Build macOS (Test)
         if: ${{ !startsWith(github.ref, 'refs/tags/v') }}
         run: npm run build:mac
-        env:
-          # 不签名也可以打包，但用户打开会提示"无法验证开发者"
-          # 如果暂时没证书，去掉下面两行 CSC 相关的也行
-          CSC_LINK: ${{ secrets.MAC_CSC_LINK }}
-          CSC_KEY_PASSWORD: ${{ secrets.MAC_CSC_KEY_PASSWORD }}
-
-      # 测试构建完成后，把产物上传供下载检查
-      - name: Upload test artifacts
-        if: ${{ !startsWith(github.ref, 'refs/tags/v') }}
-        uses: actions/upload-artifact@v4
-        with:
-          name: mac-test-build
-          path: dist/
 
       # ========== 正式流程：打 tag 时打包 + 发布到 GitHub Releases ==========
       - name: Build & Release macOS
@@ -66,3 +54,14 @@ jobs:
           APPLE_ID: ${{ secrets.APPLE_ID }}
           APPLE_APP_SPECIFIC_PASSWORD: ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+
+      - name: Upload artifacts
+        if: ${{ success() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: mac-build-${{ github.ref_name }}
+          path: |
+            main-client/dist/*.dmg
+            main-client/dist/*.zip
+            main-client/dist/*.blockmap
+            main-client/dist/latest*.yml
